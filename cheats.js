@@ -26,6 +26,7 @@ function randomGenerator () {
 	console.log('what we typed', $('#passlength').val());
 	// for loop to run through everything in an array
 	let randompass = '';
+	// parseInt to make a string a number
 	for (let i = 0; i < parseInt($('#passlength').val()); i++) {
 		console.log('looping?');
 		//// select random item from and array  myArray[Math.floor(Math.random()*myArray.length)];
@@ -35,5 +36,6 @@ function randomGenerator () {
 		randompass += randomIndex;
 	}
 	console.log('newpass?', randompass);
+	// to link what the user inputs to show on the app
 	$('#result').text(randompass);
 }
