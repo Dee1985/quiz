@@ -1,0 +1,65 @@
+
+/*const btn1 = document.getElementById ('sleepy');
+const btn2 = document.getElementById ('grumpy');
+const btn3 = document.getElementById ('happy');
+const btn4 = document.getElementById ('bashful');
+
+
+
+function initGame() {
+    const buttonEl = document.getElementById("gitLit");
+    const container = document.getElementById('intro');
+    console.log(buttonEl, container)
+    const questionZone = document.getElementById('boxes')
+    questionZone.style.display = "none"
+    console.log(questionZone)
+  
+
+buttonEl.setAttribute("class", "btn btn-primary btn-lg");
+
+
+
+
+function startGame() {
+  container.style.visibility= "hidden";
+  questionZone.style.display= "block";
+  const title= $("<h1>")
+    title.text(questions[0].title)
+    $(".questionZone").append(title)
+}
+
+const questions = [
+    {
+      title:"How tall is a giraffe?",
+      choices:["8 ft", "9 ft", "10 ft", "20 ft" ],
+      answer:2 
+    }
+]
+const choices = ["5 ft", "8 ft", "10 ft", "15 ft"];
+console.log(choices)
+choices.forEach(function(value, index){
+    console.log(value, index);
+    btn1.addEventListener("click", userPick);
+    btn2.addEventListener("click", userPick);
+    btn3.addEventListener("click", userPick);
+    btn4.addEventListener("click", userPick);
+    
+    function userPick(){
+        console.log(this);
+    } 
+    
+    
+})
+
+buttonEl.addEventListener("click", startGame);
+  }
+  
+initGame();*/
+
+
+
+
+
+
+
+
