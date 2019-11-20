@@ -3,7 +3,11 @@
 /* on start screen, user will see navbar with link to high scores in the top left and a timer counting down from 1 minute in the right
 center screen: welcome: introduction to the quiz, directions/parameters and a start button*/
 
+<<<<<<< HEAD
 // on click of the start button, the button in the welcome section will disapear and timer will start:
+=======
+// on click of the start button, the button in the welcome section will disapear:
+>>>>>>> 5c0a572a8e5383382e3bdb76a0485feae8956e5f
 // global variables created for index and score tracking
 let questionIndex = 0;
 let correct = 0;
@@ -16,8 +20,12 @@ function startquiz () {
 	const choicesDisplay = document.getElementById('choices');
 	questionDisplay.innerHTML = '';
 	choicesDisplay.innerHTML = '';
+<<<<<<< HEAD
     whamDisplay.innerHTML = '';
     // full disclosure : classmate William helped formulate my for loop. 
+=======
+	whamDisplay.innerHTML = '';
+>>>>>>> 5c0a572a8e5383382e3bdb76a0485feae8956e5f
 	questionDisplay.innerHTML = Object.values(questions[questionIndex]['title']).join('');
 	for (x = 0; x < 4; x++) {
 		let newButton = document.createElement('button');
@@ -33,6 +41,7 @@ function startquiz () {
 const startBtnEl = document.getElementById('gitLit').addEventListener('click', function () {
 	const vanishConEl = document.getElementById('welcome-instructions');
 	vanishConEl.setAttribute('class', 'container d-none');
+<<<<<<< HEAD
     console.log(startBtnEl);
     // http://navaneeth.me/simple-countdown-timer-using-javascript/#.XdSlE1dKiMo 
     var timeoutHandle;
@@ -62,6 +71,9 @@ function countdown(minutes) {
 
 countdown(2);
 
+=======
+	console.log(startBtnEl);
+>>>>>>> 5c0a572a8e5383382e3bdb76a0485feae8956e5f
 	startquiz();
 	// and the quesions will appear. answer choices to be dislplayed as buttons underneath the question. all within an array*/
 });
@@ -99,3 +111,7 @@ document.getElementById('choices').addEventListener('click', function (event) {
 });
 
 // last screen will show "All Done!" with winner score underneath and an input box for user to enter name: a submit button : a clear score button.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5c0a572a8e5383382e3bdb76a0485feae8956e5f
