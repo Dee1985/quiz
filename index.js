@@ -3,7 +3,7 @@
 /* on start screen, user will see navbar with link to high scores in the top left and a timer counting down from 1 minute in the right
 center screen: welcome: introduction to the quiz, directions/parameters and a start button*/
 
-// on click of the start button, the button in the welcome section will disapear:
+// on click of the start button, the button in the welcome section will disapear and timer will start:
 // global variables created for index and score tracking
 let questionIndex = 0;
 let correct = 0;
@@ -16,7 +16,8 @@ function startquiz () {
 	const choicesDisplay = document.getElementById('choices');
 	questionDisplay.innerHTML = '';
 	choicesDisplay.innerHTML = '';
-	whamDisplay.innerHTML = '';
+    whamDisplay.innerHTML = '';
+    // full disclosure : classmate William helped formulate my for loop. 
 	questionDisplay.innerHTML = Object.values(questions[questionIndex]['title']).join('');
 	for (x = 0; x < 4; x++) {
 		let newButton = document.createElement('button');
@@ -32,7 +33,35 @@ function startquiz () {
 const startBtnEl = document.getElementById('gitLit').addEventListener('click', function () {
 	const vanishConEl = document.getElementById('welcome-instructions');
 	vanishConEl.setAttribute('class', 'container d-none');
-	console.log(startBtnEl);
+    console.log(startBtnEl);
+    // http://navaneeth.me/simple-countdown-timer-using-javascript/#.XdSlE1dKiMo 
+    var timeoutHandle;
+function countdown(minutes) {
+    var seconds = 60;
+    var mins = minutes
+    function tick() {
+        var counter = document.getElementById("timer");
+        var current_minutes = mins-1
+        seconds--;
+        counter.innerHTML =
+        current_minutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            timeoutHandle=setTimeout(tick, 1000);
+        } else {
+
+            if(mins > 1){
+
+               // countdown(mins-1);   never reach “00″ issue solved:Contributed by Victor Streithorst
+               setTimeout(function () { countdown(mins - 1); }, 1000);
+
+            }
+        }
+    }
+    tick();
+}
+
+countdown(2);
+
 	startquiz();
 	// and the quesions will appear. answer choices to be dislplayed as buttons underneath the question. all within an array*/
 });
