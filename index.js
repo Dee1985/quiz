@@ -61,7 +61,7 @@ document.getElementById('choices').addEventListener('click', function (event) {
 	setTimeout(function () {
 		if (questionIndex < questions.length) {
 			startquiz();
-		}git
+        }
 		else {
 			alert('game over');
 		}
