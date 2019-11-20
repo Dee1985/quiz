@@ -1,5 +1,5 @@
 quiz
-https://dee1985.github.io/quiz/
+
 
 Q&A created with the incorporation of dynamic JavaScript.
 
